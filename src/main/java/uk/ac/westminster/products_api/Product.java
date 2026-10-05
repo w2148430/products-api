@@ -18,6 +18,7 @@ public class Product {
         return id;
     }
 
+    // Required or the name doesnt show
     public String getName() {
         return name;
     }
