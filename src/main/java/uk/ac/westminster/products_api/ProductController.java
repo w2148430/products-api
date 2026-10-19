@@ -10,9 +10,8 @@ import java.util.List;
 public class ProductController {
     @GetMapping("/{id}")
     public Product getById(@PathVariable Long id) {
-        return new Product(id, "Laptop", 999.99);
+        return productService.getProductById(id).orElse(null);
     }
-
     // Spring creates the ProductService and hands it over.
     @Autowired
     private ProductService productService;
